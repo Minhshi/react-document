@@ -6,6 +6,7 @@ import reduxPromise from 'redux-promise';
 import logger from 'redux-logger';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { createHistory as history } from 'history';
+import MessagesIndex from "./containers/messages_index"
 
 import '../assets/stylesheets/application.scss';
 
@@ -20,7 +21,7 @@ ReactDOM.render(
   <Provider store={createStore(reducers, {}, middlewares)}>
     <Router history={history}>
       <Switch>
-        TODO
+        <Route path="/" exact component={MessagesIndex}/>
       </Switch>
     </Router>
   </Provider>,
